@@ -1,0 +1,141 @@
+/* Variables CSS */
+:root {
+    --primary-color: #055a05; 
+    --secondary-color: #f4a261; 
+    --accent1-color: #264653; 
+    --accent2-color: #e9c46a; 
+    --heading-font: "Times New Roman", "Georgia", serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+    line-height: 1.6;
+}
+
+header, main, footer {
+    width: 840px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background-color: va;
+    color: white;
+}
+
+.logo img {
+    height: 80px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent2-color);
+}
+
+.hero {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.7;
+    background-color: var(--accent1-color);
+    color: white;
+    font-family: var(--heading-font);
+}
+
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.hero article img {
+    float: right;
+    width: 125px;
+    margin-left: 15px;
+    border-radius: 5px;
+}
+
+section {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+h1, h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.history, .adventure {
+    border-left: 5px solid var(--secondary-color);
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+}
+
+.socialmedia a {
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.socialmedia img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.socialmedia img:hover {
+    transform: scale(1.1);
+}
