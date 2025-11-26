@@ -14,7 +14,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
@@ -26,12 +25,13 @@ header, main, footer {
     margin: 0 auto;
 }
 
+/* Header con CSS Grid */
 header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
     padding: 20px 0;
-    background-color: va;
+    background-color: var(--primary-color);
     color: white;
 }
 
@@ -39,9 +39,11 @@ header {
     height: 80px;
 }
 
+/* Navegación con Flex */
 nav ul {
     display: flex;
     list-style: none;
+    justify-content: flex-end;
 }
 
 nav li {
@@ -49,14 +51,17 @@ nav li {
 }
 
 nav a {
-    color: blue;
+    color: white;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
+    padding: 5px 10px;
+    border-radius: 3px;
 }
 
 nav a:hover {
     color: var(--accent2-color);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .hero {
@@ -116,6 +121,53 @@ h1, h2 {
     border-left: 5px solid var(--secondary-color);
 }
 
+/* Sección History con diseño similar al wireframe */
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.history-content img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Sección Adventure con galería de imágenes */
+.adventure-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.adventure-gallery figure {
+    margin: 0;
+    text-align: center;
+}
+
+.adventure-gallery img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.adventure-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.adventure-gallery figcaption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: var(--accent1-color);
+    font-weight: bold;
+}
+
 footer {
     display: flex;
     justify-content: space-between;
@@ -123,6 +175,10 @@ footer {
     padding: 20px 0;
     margin-top: 30px;
     border-top: 1px solid #ddd;
+}
+
+.socialmedia {
+    display: flex;
 }
 
 .socialmedia a {
