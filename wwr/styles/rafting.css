@@ -195,3 +195,174 @@ footer {
 .socialmedia img:hover {
     transform: scale(1.1);
 }
+
+/* Estilos para la sección contact-info */
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 40px; /* Espacio entre el mapa y el formulario */
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Estilos para el mapa */
+.map {
+    width: 100%; /* Ocupa toda la columna izquierda */
+}
+
+.map iframe {
+    width: 100%; /* El iframe ocupa todo el ancho del contenedor */
+    height: 500px; /* Aumenté un poco la altura para mejor visualización */
+    border-radius: 5px;
+    border: 2px solid var(--secondary-color); /* Borde para destacar */
+}
+
+/* Estilos para el formulario */
+.contact-info form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Espacio uniforme entre elementos */
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contact-info label {
+    font-weight: bold;
+    color: var(--primary-color);
+    display: block;
+    margin-top: 10px;
+}
+
+.contact-info input[type="text"],
+.contact-info input[type="email"],
+.contact-info textarea {
+    width: 100%;
+    padding: 5px;
+    border: 2px solid #ddd;
+    border-radius: 2px;
+    font-family: var(--body-font);
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.contact-info input[type="text"]:focus,
+.contact-info input[type="email"]:focus,
+.contact-info textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+.contact-info fieldset {
+    margin-top: 5px;
+    border: 2px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.contact-info fieldset legend {
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0 10px;
+}
+
+.contact-info fieldset label {
+    display: block;
+    margin: 8px 0;
+    font-weight: normal;
+}
+
+.contact-info button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+}
+
+.contact-info button:hover {
+    background-color: var(--accent1-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Estilos para la casilla de verificación */
+.contact-info input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .contact-info {
+        grid-template-columns: 1fr; /* Una sola columna en móviles */
+        gap: 20px;
+    }
+    
+    .map iframe {
+        height: 300px; /* Menor altura en móviles */
+    }
+}
+
+/* Sección de empleados */
+.employee-profiles {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.employee-profiles h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.employees {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.employees figure {
+    text-align: center;
+    flex: 1 1 200px; /* Esto hará que cada figura tenga un ancho mínimo de 200px y se expanda equitativamente */
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.employees figure:hover {
+    transform: translateY(-5px);
+}
+
+.employees img {
+    width: 150px; /* Tamaño fijo para las imágenes */
+    height: 150px; /* Tamaño fijo para hacerlas cuadradas */
+    border-radius: 50%; /* Hace que las imágenes sean circulares */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    margin-bottom: 10px;
+    border: 3px solid var(--secondary-color);
+}
+
+.employees figcaption {
+    font-weight: bold;
+    color: var(--accent1-color);
+    font-size: 1rem;
+}
+
+main > section:first-of-type {
+    text-align: center;
+}
